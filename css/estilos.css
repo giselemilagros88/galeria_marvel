@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #141414;
+    color: #fff;
+}
+header{
+    text-align: center;
+    padding: 20px;
+}
+footer{
+    text-align: center;
+    margin-top:10px;
+    
+}
+
+section{
+    width: 90%;
+    margin:0 auto;
+    height: 85vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:0.5px solid gray;
+}
+
+section img{
+    width: 0px;
+    height:100%;
+    flex-grow: 1;/*que dentro de la caja flexible ocupe todo el espacio que pueda*/
+    object-fit: cover;
+    opacity: 0.8;
+    transition: .5s ease;
+}
+
+section img:hover{
+    width: 30%;
+    opacity: 1;
+    filter:contrast(120%);
+}
+
+@media screen and (max-width: 768px){
+    section{
+        flex-wrap: wrap;
+    }
+    section img{
+        height: 80%;
+    }
+    section img:hover{
+        width: 70%;
+        
+    }
+}
